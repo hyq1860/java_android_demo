@@ -1,0 +1,32 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.applite.usingservice.MainActivity" >
+
+    <Button
+        android:id="@+id/btnStartService"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="启动Service" />
+
+    <Button
+        android:id="@+id/btnStopService"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="停止Service" />
+
+    <Button
+        android:id="@+id/btnBindService"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="绑定Service" />
+
+    <Button
+        android:id="@+id/btnUnbindService"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="解绑Service" />
+
+</LinearLayout>

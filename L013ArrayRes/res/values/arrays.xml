@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="strArr">
+        <item>南</item>
+        <item>北</item>
+    </string-array>
+    <integer-array name="intArr">
+        <item>1</item>
+        <item>2</item>
+    </integer-array>
+</resources>

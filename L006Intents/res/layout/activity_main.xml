@@ -1,0 +1,37 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.applite.intents.MainActivity" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hello_world" />
+
+    <Button
+        android:id="@+id/btnStartAty1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="启动Aty1" />
+    
+    <Button
+        android:id="@+id/btnOpenImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="打开图片" />
+
+    <Button
+        android:id="@+id/btnCall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="打电话" />
+    
+    <Button
+        android:id="@+id/btnNavToUrl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="打开网页" />
+
+</LinearLayout>

@@ -1,0 +1,14 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.applite.usinglistview.MainActivity" >
+<!-- 注意xml的大小写 也会有影响 -->
+   <ListView 
+       android:id="@+id/listview"
+       android:layout_width="fill_parent" 
+       android:layout_height="fill_parent">
+   </ListView>
+
+</LinearLayout>
