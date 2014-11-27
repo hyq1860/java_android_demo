@@ -51,6 +51,7 @@
     </LinearLayout>
     
     <ImageView 
+        android:id="@+id/id_iv_tabline"
         android:layout_width="100dp"
         android:layout_height="3dp" 
         android:background="@drawable/tabline"/>
