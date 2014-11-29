@@ -27,6 +27,10 @@ public class CustomListViewAdapter extends BaseAdapter {
 	
 		private CustomListCellData[] data=new CustomListCellData[]{
 				new CustomListCellData("美女1", "美女波霸", R.drawable.img1),
+				new CustomListCellData("美女1", "美女波霸", R.drawable.img1),
+				new CustomListCellData("美女1", "美女波霸", R.drawable.img1),
+				new CustomListCellData("美女1", "美女波霸", R.drawable.img1),
+				new CustomListCellData("美女1", "美女波霸", R.drawable.img1),
 				new CustomListCellData("美女1", "美女波霸", R.drawable.img1)
 		};
 		

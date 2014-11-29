@@ -46,6 +46,7 @@ public class MainActivity extends ActionBarActivity implements OnItemClickListen
         
         customerDataAdapter.add(new ListCellData("林志玲", 1, 38));
         customerDataAdapter.add(new ListCellData("林志颍", 1, 38));
+        customerDataAdapter.add(new ListCellData("林志颍", 1, 38));
     }
 
 
