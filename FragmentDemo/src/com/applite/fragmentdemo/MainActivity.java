@@ -58,7 +58,8 @@ public class MainActivity extends Activity implements OnCheckedChangeListener {
 		break;
 		case R.id.fourth:
 		{
-			
+			Intent intent=new Intent(MainActivity.this, Activity4.class);
+			startActivity(intent);
 		}
 		break;
 

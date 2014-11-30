@@ -26,6 +26,8 @@
         <activity android:name="com.applite.fragmentdemo.Activity2"></activity>
         
         <activity android:name="com.applite.fragmentdemo.Activity3"></activity>
+        
+        <activity android:name="com.applite.fragmentdemo.Activity4"></activity>
     </application>
 
 </manifest>
