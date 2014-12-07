@@ -1,12 +1,32 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="${relativePackage}.${activityClass}" >
+ 	android:orientation="vertical"
+    tools:context=".MainActivity" >
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        android:text="使用该第三方类库优化加载图片"
+        android:textSize="20sp" />
 
-</RelativeLayout>
+     <Button
+         android:id="@+id/btn_lv"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:text="ListView中使用" />
+
+      <Button
+            android:id="@+id/btn_gv"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="GridView中使用" />
+
+       <Button
+             android:id="@+id/btn_vp"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="ViewPager中使用" />
+
+</LinearLayout>
