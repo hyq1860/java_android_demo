@@ -1,6 +1,7 @@
 package com.applite.androidpulltorefreshdemo;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 import com.handmark.pulltorefresh.library.PullToRefreshBase;
@@ -15,25 +16,26 @@ import android.widget.ListView;
 
 public class MainActivity extends Activity {
 	
-	private PullToRefreshListView  myListView;
-	private ArrayAdapter<String> adapter;
+	private PullToRefreshListView  mPullToRefreshListView;
+	private PullToRefreshAdapter adapter;
+	
+	private LinkedList<DataItemInfo> dataSources;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		
-		myListView=(PullToRefreshListView)findViewById(R.id.mylv);
-		List<String> data=new ArrayList<String>();
-		data.add("美女");
-		data.add("美女");
-		data.add("美女");
+		mPullToRefreshListView=(PullToRefreshListView)findViewById(R.id.mylv);
+		dataSources=new LinkedList<DataItemInfo>();
+		dataSources.add(new DataItemInfo(null,"中国","测试"));
+		dataSources.add(new DataItemInfo(null,"中国","测试"));
 		
-		adapter=new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,data);
-		myListView.setAdapter(adapter);
+		adapter=new PullToRefreshAdapter(this, dataSources);
+		mPullToRefreshListView.setAdapter(adapter);
 		
 		
-		myListView.setOnRefreshListener(new OnRefreshListener<ListView>() {
+		mPullToRefreshListView.setOnRefreshListener(new OnRefreshListener<ListView>() {
 
 			@Override
 			public void onRefresh(PullToRefreshBase<ListView> refreshView) {
@@ -54,10 +56,11 @@ public class MainActivity extends Activity {
 					
 					//异步任务完成后更新ui主界面
 					protected void onPostExecute(Void result) {
-						adapter.addAll("骗子","90后");
-						
-						//通知ui界面数据更新完毕
-						myListView.onRefreshComplete();
+						dataSources.add(new DataItemInfo(null,"中国2","测试"));
+						dataSources.add(new DataItemInfo(null,"中国3","测试"));
+						adapter.notifyDataSetChanged();
+						//通知UI界面数据更新完毕
+						mPullToRefreshListView.onRefreshComplete();
 					};
 					
 				}.execute();
