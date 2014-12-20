@@ -4,38 +4,13 @@
     android:layout_height="match_parent">
 
     <com.applite.view.FlowLayout 
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent">
+        android:id="@+id/id_flowlayout"
+        android:padding="10dp"
+        android:layout_width="200dp"
+        android:layout_height="match_parent"
+        android:background="#444444">
         
-        <Button 
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="你好" />
         
-        <Button 
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="你好" />
-        
-        <Button 
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="你好" />
-        
-        <Button 
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="你好" />
-        
-        <Button 
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="你好" />
-        
-        <Button 
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="你好" />
         
     </com.applite.view.FlowLayout>
 
