@@ -4,6 +4,33 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
     
+    <RelativeLayout 
+        android:id="@+id/layout_webview_title"
+        android:layout_height="50dp"
+        android:layout_width="match_parent">
+        
+        <Button 
+            android:id="@+id/btn_back"
+            android:layout_alignParentLeft="true"
+            android:layout_width="wrap_content"
+            android:layout_height="40dip"
+            android:text="返回"/>
+        
+        <TextView 
+            android:id="@+id/tv_webview_url"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        
+        <Button 
+            android:id="@+id/btn_refresh"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="40dip"
+            android:text="刷新"/>
+        
+    </RelativeLayout>
+    
 	<WebView 
 	    android:id="@+id/webView"
 	    android:layout_width="match_parent"
