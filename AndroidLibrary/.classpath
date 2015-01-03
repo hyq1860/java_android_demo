@@ -2,8 +2,10 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="gen"/>
-	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
+	<classpathentry kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
 	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
 	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.DEPENDENCIES"/>
+	<classpathentry kind="lib" path="D:/JavaStudio/开源组件/google-gson-2.2.4-release/google-gson-2.2.4/gson-2.2.4.jar"/>
+	<classpathentry kind="lib" path="D:/JavaStudio/workspace2/VolleyDemo/libs/Volley.jar"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>

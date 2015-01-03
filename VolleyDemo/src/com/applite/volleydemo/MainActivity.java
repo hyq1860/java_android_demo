@@ -116,7 +116,8 @@ public class MainActivity extends Activity {
 				// TODO Auto-generated method stub
 				Log.e("postVolley", error.getMessage(),error);
 			}
-		}){
+		})
+    	{
     		@Override
     		protected Map<String, String> getParams() throws AuthFailureError {
     			Map<String,String> map=new HashMap<String,String>();
@@ -232,7 +233,7 @@ public class MainActivity extends Activity {
 		};
 		
 		ImageLoader imageLoader=new ImageLoader(requestQueue, imageCache);
-		networkImageView.setTag("url");//why
+		networkImageView.setTag("url");//why 乱序
 		networkImageView.setImageUrl(imageUrl, imageLoader);
 	}
 }

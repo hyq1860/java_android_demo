@@ -7,6 +7,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
+import android.webkit.DownloadListener;
 import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
@@ -29,6 +30,9 @@ public class MainActivity extends Activity {
 	
 	//webview的url地址
 	private TextView webUrl;
+	
+	//错误码展示
+	private TextView tv_webview_error;
 	
 	//进度dialog
 	private ProgressDialog progressDialog;
@@ -72,6 +76,7 @@ public class MainActivity extends Activity {
 		return super.onKeyDown(keyCode, event);
 	}
 	
+	//后退和刷新
 	class WebViewListener implements View.OnClickListener
 	{
 
@@ -91,10 +96,34 @@ public class MainActivity extends Activity {
 		
 	}
 	
+	//下载文件
+	class Download implements DownloadListener
+	{
+
+		@Override
+		public void onDownloadStart(String url, String userAgent,
+				String contentDisposition, String mimetype, long contentLength) {
+			System.out.println("------------->"+url);
+			if(url.endsWith(".apk"))
+			{
+				//第一种方式 自定义的
+				new HttpThread(url).start();
+				
+				//通过系统的浏览器下载
+				Uri uri=Uri.parse(url);
+				Intent intent=new Intent(Intent.ACTION_VIEW,uri);
+				startActivity(intent);
+			}
+			
+		}
+		
+	}
+	
 	private void init(){
 		btnBack=(Button)findViewById(R.id.btn_back);
 		btnRefresh=(Button)findViewById(R.id.btn_refresh);
 		webUrl=(TextView)findViewById(R.id.tv_webview_url);
+		tv_webview_error=(TextView)findViewById(R.id.tv_webview_error);
 		webView=(WebView)findViewById(R.id.webView);
 		
 		//启用使用javascript
@@ -107,12 +136,19 @@ public class MainActivity extends Activity {
 		btnBack.setOnClickListener(new WebViewListener());
 		btnRefresh.setOnClickListener(new WebViewListener());
 		
+		webView.setDownloadListener(new Download());
+		
 		//页面加载进度
 		webView.setWebChromeClient(new WebChromeClient(){
-			
 			//自定义webview的title
 			@Override
 			public void onReceivedTitle(WebView view, String title) {
+				
+				if(webView.getVisibility()==View.GONE)
+				{
+					tv_webview_error.setVisibility(View.GONE);
+					webView.setVisibility(View.VISIBLE);
+				}
 				webUrl.setText(title);
 				super.onReceivedTitle(view, title);
 			}
@@ -146,6 +182,7 @@ public class MainActivity extends Activity {
 					progressDialog.setProgress(newProgress);
 				}
 				progressDialog.show();
+				
 			}
 
 			private void closeLoadDialog() {
@@ -166,7 +203,22 @@ public class MainActivity extends Activity {
 				//返回值为false 控制在系统或者第三方中打开
 				view.loadUrl(url);
 				return true;
+			};
+			
+			//webview错误时候的处理
+			@Override
+			public void onReceivedError(WebView view, int errorCode,
+					String description, String failingUrl) {
+				
+				super.onReceivedError(view, errorCode, description, failingUrl);
+				//加载本地页面展示错误
+				//view.loadUrl("file:///android_asset/error.html");
+				
+				//显示错误信息
+				tv_webview_error.setText("404错误");
+				webView.setVisibility(View.GONE);
 			}
+
 		});
 		
 		//加载本地文件
@@ -175,5 +227,6 @@ public class MainActivity extends Activity {
 		
 		//加载web资源
 		webView.loadUrl("http://2014.qq.com");
+		
 	}
 }

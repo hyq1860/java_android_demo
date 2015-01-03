@@ -43,7 +43,6 @@ public class MainActivity extends ListActivity {
     //列表项被点击
     @Override
     protected void onListItemClick(ListView l, View v, int position, long id) {
-    	// TODO Auto-generated method stub
     	
     	ListCellData data=adapter.getItem(position);
     	data.startActivity();

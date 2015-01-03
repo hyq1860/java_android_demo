@@ -13,22 +13,27 @@ import android.support.v4.widget.SwipeRefreshLayout;
 public class MainActivity extends Activity implements SwipeRefreshLayout.OnRefreshListener {
 
 	private SwipeRefreshLayout mSwipeLayout;
+	
 	private ListView mListView;
+	
 	private ArrayList<String> list = new ArrayList<String>();
 	
 	private ArrayAdapter<String> adapter;
+	
 	public int i=0;
 	
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		
 		setContentView(R.layout.activity_main);
 
 		mListView = (ListView) findViewById(R.id.listview);
-		adapter=new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,
-				getData());
+		mSwipeLayout = (SwipeRefreshLayout) findViewById(R.id.swipe_container);
+		
+		adapter=new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,getData());
 		mListView.setAdapter(adapter);
 
-		mSwipeLayout = (SwipeRefreshLayout) findViewById(R.id.swipe_container);
+		
 		mSwipeLayout.setOnRefreshListener(this);
 		mSwipeLayout.setColorSchemeResources(android.R.color.holo_blue_bright,
 				android.R.color.holo_green_light, android.R.color.holo_orange_light,

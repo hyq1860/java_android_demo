@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="text" format="string"></attr>
+    <attr name="textColor" format="color"></attr>
+    <attr name="textSize" format="dimension"></attr>
+    
+    <declare-styleable name="ScratchCradView">
+        <attr name="text"></attr>
+    	<attr name="textColor"></attr>
+    	<attr name="textSize"></attr>
+    </declare-styleable>
+</resources>
