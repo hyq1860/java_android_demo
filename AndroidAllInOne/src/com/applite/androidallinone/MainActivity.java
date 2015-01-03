@@ -33,7 +33,7 @@ public class MainActivity extends ListActivity {
 		adapter.add(new ListItem(this, "刮刮卡", new Intent(this, AtyScratchCard.class)));
 		adapter.add(new ListItem(this, "ViewPager作为ListView的HeaderView", new Intent(this, AtySliderAndListView.class)));
 		adapter.add(new ListItem(this, "AtyViewPagerAsListViewItem", new Intent(this, AtyViewPagerAsListViewItem.class)));
-		
+		adapter.add(new ListItem(this, "属性动画Animator与Animation", new Intent(this, AtyAnimatorAndAnimation.class)));
 	}
 	
 	@Override

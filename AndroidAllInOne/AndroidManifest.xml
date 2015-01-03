@@ -32,7 +32,7 @@
         <activity android:name=".scratchcard.AtyScratchCard"></activity>
         <activity android:name=".AtySliderAndListView"></activity>
         <activity android:name=".AtyViewPagerAsListViewItem"></activity>
-        
+        <activity android:name=".AtyAnimatorAndAnimation"></activity>
         
         
     </application>
