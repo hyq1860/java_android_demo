@@ -31,6 +31,7 @@ public class FlowLayout extends ViewGroup {
 
 	@Override
 	protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+		//获取ViewGroup实际的宽和高 涉及到MeasureSpec类的使用
 		//宽度
 		int sizeWidth=MeasureSpec.getSize(widthMeasureSpec);
 		//宽模式
@@ -113,6 +114,7 @@ public class FlowLayout extends ViewGroup {
 	 * */
 	private List<Integer> mLineHeight=new ArrayList<Integer>();
 	
+	//对每一个子view视图进行布局
 	@Override
 	protected void onLayout(boolean changed, int l, int t, int r, int b) {
 		mAllViews.clear();
