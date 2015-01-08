@@ -34,6 +34,7 @@
         <activity android:name=".AtyViewPagerAsListViewItem"></activity>
         <activity android:name=".AtyAnimatorAndAnimation"></activity>
         <activity android:name=".AtyDrawerLayoutDemo"></activity>
+        <activity android:name=".AtyScrollViewAndWebView"></activity>
         
         
     </application>

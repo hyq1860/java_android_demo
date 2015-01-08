@@ -1,0 +1,21 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+   <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <com.applite.androidallinone.MyWebView
+            android:id="@+id/wv_show"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" />
+        
+        <Button android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="我是按钮"/>
+    </LinearLayout>
+</ScrollView>

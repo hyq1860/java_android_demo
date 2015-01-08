@@ -35,6 +35,7 @@ public class MainActivity extends ListActivity {
 		adapter.add(new ListItem(this, "AtyViewPagerAsListViewItem", new Intent(this, AtyViewPagerAsListViewItem.class)));
 		adapter.add(new ListItem(this, "属性动画Animator与Animation", new Intent(this, AtyAnimatorAndAnimation.class)));
 		adapter.add(new ListItem(this, "DrawerLayoutDemo", new Intent(this,AtyDrawerLayoutDemo.class)));
+		adapter.add(new ListItem(this, "ScrollViewAndWebView", new Intent(this,AtyScrollViewAndWebView.class)));
 	}
 	
 	@Override
