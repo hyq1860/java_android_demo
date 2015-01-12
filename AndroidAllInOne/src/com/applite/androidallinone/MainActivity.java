@@ -36,6 +36,11 @@ public class MainActivity extends ListActivity {
 		adapter.add(new ListItem(this, "属性动画Animator与Animation", new Intent(this, AtyAnimatorAndAnimation.class)));
 		adapter.add(new ListItem(this, "DrawerLayoutDemo", new Intent(this,AtyDrawerLayoutDemo.class)));
 		adapter.add(new ListItem(this, "ScrollViewAndWebView", new Intent(this,AtyScrollViewAndWebView.class)));
+		
+		adapter.add(new ListItem(this, "AtyEffectiveNavigation", new Intent(this,AtyEffectiveNavigation.class)));
+		adapter.add(new ListItem(this, "AtyAppSection", new Intent(this,AtyAppSection.class)));
+		adapter.add(new ListItem(this, "CustomView", new Intent(this,AtyCustomView.class)));
+		
 	}
 	
 	@Override

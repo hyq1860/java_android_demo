@@ -35,6 +35,9 @@
         <activity android:name=".AtyAnimatorAndAnimation"></activity>
         <activity android:name=".AtyDrawerLayoutDemo"></activity>
         <activity android:name=".AtyScrollViewAndWebView"></activity>
+        <activity android:name=".AtyEffectiveNavigation"></activity>
+        <activity android:name=".AtyAppSection"></activity>
+        <activity android:name=".AtyCustomView"></activity>
         
         
     </application>
