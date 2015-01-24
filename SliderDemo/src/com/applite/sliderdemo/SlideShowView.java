@@ -136,7 +136,7 @@ public class SlideShowView extends FrameLayout {
      * 填充ViewPager的页面适配器
      * @author caizhiming
      */
-    private class MyPagerAdapter  extends PagerAdapter{
+    private class MyPagerAdapter extends PagerAdapter{
 
         @Override
         public void destroyItem(View container, int position, Object object) {
