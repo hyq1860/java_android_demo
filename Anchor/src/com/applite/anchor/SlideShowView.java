@@ -255,7 +255,6 @@ public class SlideShowView extends FrameLayout {
                 handler.obtainMessage().sendToTarget();
             }
         }
-        
     }
     /**
      * 销毁ImageView资源，回收内存

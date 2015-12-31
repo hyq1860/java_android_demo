@@ -226,7 +226,7 @@ public class MainActivity extends Activity {
 		//webView.loadUrl("file:///android_asset/example.html");
 		
 		//加载web资源
-		webView.loadUrl("http://2014.qq.com");
+		webView.loadUrl("http://182.92.167.82:5001/admin/");
 		
 	}
 }

@@ -10,6 +10,7 @@ import android.view.MenuItem;
 import android.view.ViewGroup.LayoutParams;
 import android.view.ViewGroup.MarginLayoutParams;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class MainActivity extends Activity {
@@ -64,8 +65,8 @@ public class MainActivity extends Activity {
 		*/
 		LayoutInflater inflater=LayoutInflater.from(this);
 		for (int i = 0; i < labeStrings.length; i++) {
-			TextView tv=(TextView)inflater.inflate(R.layout.tv, mFlowLayout,false);
-			tv.setText(labeStrings[i]);
+			ImageView tv=(ImageView)inflater.inflate(R.layout.tv, mFlowLayout,false);
+			//tv.setText(labeStrings[i]);
 			mFlowLayout.addView(tv);
 		}
 	}
